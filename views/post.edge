@@ -1,0 +1,18 @@
+@layout('layouts.app')
+ 
+@section('content')
+<header>
+    <h1>{{ post.title }}</h1>
+    <span>Posted by
+        <span>{{ post.author }}</span>
+        on {{ post.createdAt.toDateString() }}
+    </span>
+</header>
+
+<article>
+    <div>
+        {{ post.content }}
+    </div>
+</article>
+<hr>
+@endsection

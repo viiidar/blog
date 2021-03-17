@@ -1,0 +1,23 @@
+@layout('layouts.app')
+
+@section('content')
+
+<header>
+    <h1>Login</h1>
+</header>
+
+<form action="/users/login" method="POST" encType="multipart/form-data">
+    <div>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email">
+    </div>
+    <div>
+        <label>Password</label>
+        <!-- le type password permet de cacher le mdp tapé -->
+        <input type="password" name="password" placeholder="Password">
+    </div>
+    <div>
+        <button>Login</button>
+    </div>
+</form>
+@endsection

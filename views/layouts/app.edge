@@ -1,0 +1,49 @@
+  <!-- Le template de base commun à toutes les pages -->
+
+<!DOCTYPE html>
+<html lang="fr">
+ 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+ 
+  <title>My blog</title>
+
+  <link href="/public/theme/css/stylesheet.css" rel="stylesheet">
+</head>
+ 
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/posts/new">New Post</a>
+      </li>
+      @if(!auth)
+      <li>
+        <a href="/auth/login">Login</a>
+      </li>
+      <li>
+        <a href="/auth/register">Register</a>
+      </li>
+      @else
+      <li>
+        <a href="/auth/logout">Logout</a>
+      </li>
+      @endif
+    </ul>
+  </nav>
+
+  <!-- C'est là qu'on va insérer du contenu -->
+  @!section('content')
+ 
+  <!-- Footer -->
+
+  <script src="/public/theme/js/script.js"></script> 
+</body>
+ 
+</html>
